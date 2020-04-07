@@ -64,10 +64,7 @@ class TicTacToe
 
     def won?
         WIN_COMBINATIONS.each do |combo|
-            if board[combo[0]] == "X" and board[combo[1]] == "X" and board[combo[2]] == "X"
-                return [combo[0], combo[1], combo[2]]
-            end
-            if board[combo[0]] == "O" and board[combo[1]] == "O" and board[combo[2]] == "O"
+            if board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]] && board[combo[0]] != " "
                 return [combo[0], combo[1], combo[2]]
             end
         end
